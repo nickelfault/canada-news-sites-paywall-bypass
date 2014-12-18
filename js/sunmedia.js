@@ -1,0 +1,1 @@
+$('.full_content.visuallyhidden').removeClass('visuallyhidden');

@@ -1,0 +1,52 @@
+{
+    "name": "Canada News Sites Paywall Bypass",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "This extension bypasses article limit paywalls for several Canadian news sites.",
+    "icons": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "*://*.calgaryherald.com/*",
+        "*://*.edmontonjournal.com/*",
+        "*://*.montrealgazette.com/*",
+        "*://*.leaderpost.com/*",
+        "*://*.thestarphoenix.com/*",
+        "*://*.theprovince.com/*",
+        "*://*.vancouversun.com/*",
+        "*://*.timescolonist.com/*",
+        "*://*.windsorstar.com/*",
+        "*://*.nationalpost.com/*",
+        "*://*.financialpost.com/*",
+        "*://*.edmontonsun.com/*",
+        "*://*.calgarysun.com/*",
+        "*://*.ottawasun.com/*",
+        "*://*.torontosun.com/*",
+        "*://*.winnipegsun.com/*",
+        "*://*.ppjol.net/*"
+    ],
+    "background": {
+        "scripts": ["js/bypass.js"],
+        "persistent": true
+    },
+	"content_scripts": [
+        {
+            "js": [
+                "js/jquery-2.1.1.min.js",
+                "js/sunmedia.js"
+            ],
+            "matches": [
+                "*://*.edmontonsun.com/*",
+                "*://*.calgarysun.com/*",
+                "*://*.ottawasun.com/*",
+                "*://*.torontosun.com/*",
+                "*://*.winnipegsun.com/*"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
