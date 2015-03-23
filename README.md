@@ -19,3 +19,4 @@ Canada News Sites Paywall Bypass is a Google Chrome extension to allow unlimited
 * The Windsor Star
 * National Post
 * Financial Post
+* The Western Star
