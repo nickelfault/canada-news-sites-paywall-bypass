@@ -1,0 +1,1 @@
+$('.js-tgam-paywall,.js-tgam-paywall-backdrop').remove();
