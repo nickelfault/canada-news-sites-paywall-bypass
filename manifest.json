@@ -1,6 +1,6 @@
 {
     "name": "Canada News Sites Paywall Bypass",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "manifest_version": 2,
     "description": "This extension bypasses article limit paywalls for several Canadian news sites.",
     "icons": {
@@ -40,7 +40,7 @@
             "matches": [
                 "*://*.winnipegfreepress.com/*"
             ],
-            "run_at": "document_end"
+            "run_at": "document_start"
         },
 		{
             "js": [
