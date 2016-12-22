@@ -6,9 +6,11 @@ $(window).load(function() {
 });
 
 $(function() {
-	var article = $('.text-wrapper').html();
-	
-	$(window).load(function() {
-		$('.text-wrapper').html(article);
-	});
+	if ($('.text-wrapper').length > 0) {
+		var article = $('.text-wrapper').first().html();
+		
+		$(window).load(function() {
+			$('.text-wrapper').first().html(article);
+		});
+	}
 });
