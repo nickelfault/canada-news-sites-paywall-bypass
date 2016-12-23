@@ -6,7 +6,11 @@ chrome.webRequest.onBeforeRequest.addListener(
 			};
         }
         return {
-            cancel: details.url.indexOf("ppjol.net/") != -1 || details.url.indexOf("paywall.js") != -1 || details.url.indexOf("paywall.min.js") != -1
+            cancel: details.url.indexOf("ppjol.net/") != -1
+            	|| details.url.indexOf("ppjol.com/") != -1
+            	|| details.url.indexOf("paywall.js") != -1
+            	|| details.url.indexOf("paywall.min.js") != -1 
+            	|| details.url.indexOf("tinypass.min.js") != -1
         };
     },
     {urls: [
@@ -28,7 +32,8 @@ chrome.webRequest.onBeforeRequest.addListener(
         "*://*.thewesternstar.com/*",
         "*://*.ppjol.net/*",
         "*://*.ottawacitizen.com/*",
-        "*://*.winnipegfreepress.com/*"
+        "*://*.winnipegfreepress.com/*",
+        "*://*.tinypass.com/*"
 	]},
     ["blocking"]
 );
