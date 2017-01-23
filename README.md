@@ -8,6 +8,7 @@ Canada News Sites Paywall Bypass is a Google Chrome extension to allow unlimited
 * Ottawa Sun
 * Toronto Sun
 * Winnipeg Sun
+* Brandon Sun
 * Calgary Herald
 * Edmonton Journal
 * Montreal Gazette
