@@ -1,49 +1,61 @@
 {
-    "name": "Canada News Sites Paywall Bypass",
-    "version": "1.4.4",
-    "manifest_version": 2,
-    "description": "This extension bypasses article limit paywalls for several Canadian news sites.",
-    "icons": {
-        "16": "img/icon16.png",
-        "48": "img/icon48.png",
-        "128": "img/icon128.png"
-    },
-    "permissions": [
-        "webRequest",
-        "webRequestBlocking",
-        "<all_urls>"
-    ],
-    "background": {
-        "scripts": ["js/bypass.js"],
-        "persistent": true
-    },
-    "web_accessible_resources": [
-    	"js/wfp.js"
-    ],
+	"name": "Canada News Sites Paywall Bypass",
+	"version": "1.5.0",
+	"manifest_version": 2,
+	"description": "This extension bypasses article limit paywalls for several Canadian news sites.",
+	"icons": {
+		"16": "img/icon16.png",
+		"48": "img/icon48.png",
+		"128": "img/icon128.png"
+	},
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking",
+		"<all_urls>"
+	],
+	"background": {
+		"scripts": [
+			"js/bypass.js"
+		],
+		"persistent": true
+	},
+	"web_accessible_resources": [
+		"js/wfp.js"
+	],
 	"content_scripts": [
-        {
-            "js": [
-                "js/jquery-2.1.1.min.js",
-                "js/sunmedia.js"
-            ],
-            "matches": [
-                "*://*.edmontonsun.com/*",
-                "*://*.calgarysun.com/*",
-                "*://*.ottawasun.com/*",
-                "*://*.torontosun.com/*",
-                "*://*.winnipegsun.com/*"
-            ],
-            "run_at": "document_end"
-        },
 		{
-            "js": [
-                "js/jquery-2.1.1.min.js",
+			"js": [
+				"js/jquery-2.1.1.min.js",
+				"js/sunmedia.js"
+			],
+			"matches": [
+				"*://*.edmontonsun.com/*",
+				"*://*.calgarysun.com/*",
+				"*://*.ottawasun.com/*",
+				"*://*.torontosun.com/*",
+				"*://*.winnipegsun.com/*"
+			],
+			"run_at": "document_end"
+		},
+		{
+			"js": [
+				"js/jquery-2.1.1.min.js",
 				"js/globe-and-mail.js"
-            ],
-            "matches": [
-                "*://*.theglobeandmail.com/*"
-            ],
-            "run_at": "document_end"
-        }
-    ]
+			],
+			"matches": [
+				"*://*.theglobeandmail.com/*"
+			],
+			"run_at": "document_end"
+		},
+		{
+			"js": [
+				"js/jquery-2.1.1.min.js",
+				"js/brandonsun.js"
+			],
+			"matches": [
+				"*://*.brandonsun.com/*"
+			],
+			"run_at": "document_end"
+		}
+	]
 }
